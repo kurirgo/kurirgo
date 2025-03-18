@@ -10,23 +10,23 @@ body {
 
 /* Hero Section */
 .hero {
-    background: url('bg.jpg') center/cover no-repeat;
+    background: url('bg.png') center/cover no-repeat;
     color: white;
     padding: 120px 0;
-    text-align: center;
-    position: relative;
+
 }
 
 .hero::before {
     content: "";
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Efek overlay gelap agar teks tetap terbaca */
+
 }
 
 .hero .container {
     position: relative;
     z-index: 2;
+    padding: 20px;
 }
 
 /* Animasi Hero Teks */
@@ -42,19 +42,40 @@ body {
 }
 
 .hero h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    background: linear-gradient(45deg, #26ff00, #26ff00);
     -webkit-background-clip: text;
     color: transparent;
     animation: fadeSlide 1.5s ease-out;
 }
 
 .hero p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: #f8f9fa;
     animation: fadeSlide 2s ease-out;
 }
+
+/* Tombol Lacak yang Modern */
+.btn-lacak {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    padding: 8px 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(255, 65, 108, 0.3);
+}
+
+.btn-lacak:hover {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    box-shadow: 0 6px 15px rgba(255, 65, 108, 0.5);
+    transform: translateY(-3px);
+}
+
 
 /* Tracking Card */
 .tracking-card {

@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Data Tracking (tetap dipertahankan)
     const trackingData = { 
-        resi: "123456",
+        resi: "FF1122QWERTY321",
         origin: "Kota Surabaya",
         destination: "Kab Banyumas",
         service: "FastTrack",
@@ -35,5 +36,24 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
             trackingInfo.innerHTML = resultHTML;
         }, index * 600);
+    });
+
+    // ✅ Fungsi Toggle Navbar untuk Hamburger Menu
+    const navbarToggler = document.querySelector(".navbar-toggler");
+    const navbarCollapse = document.querySelector(".navbar-collapse");
+
+    navbarToggler.addEventListener("click", () => {
+        navbarCollapse.classList.toggle("show"); // Toggle class untuk menampilkan/menyembunyikan menu
+    });
+
+    // ✅ Tutup Navbar setelah menu diklik (untuk UX yang lebih baik di mobile)
+    document.querySelectorAll(".nav-link").forEach(link => {
+        link.addEventListener("click", () => {
+            if (navbarCollapse.classList.contains("show")) {
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                    toggle: true
+                });
+            }
+        });
     });
 });
