@@ -1,0 +1,121 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+/* Hero Section */
+.hero {
+    background: url('bg.jpg') center/cover no-repeat;
+    color: white;
+    padding: 120px 0;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Efek overlay gelap agar teks tetap terbaca */
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Animasi Hero Teks */
+@keyframes fadeSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: fadeSlide 1.5s ease-out;
+}
+
+.hero p {
+    font-size: 1rem;
+    color: #f8f9fa;
+    animation: fadeSlide 2s ease-out;
+}
+
+/* Tracking Card */
+.tracking-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+/* Timeline Tracking */
+.tracking-step {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-left: 4px solid #ff4b2b;
+    position: relative;
+}
+
+.tracking-step:last-child {
+    border-left: 4px solid transparent;
+}
+
+.tracking-step .icon {
+    width: 40px;
+    height: 40px;
+    background: #ff4b2b;
+    color: white;
+    font-size: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.tracking-step .status {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.tracking-step small {
+    color: gray;
+    font-size: 14px;
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Sections */
+section {
+    padding: 60px 0;
+}
+
+/* Footer */
+footer {
+    background: #ff4b2b;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
